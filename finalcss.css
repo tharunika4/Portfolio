@@ -1,0 +1,343 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;    
+}
+body{
+    background: white;
+    color: #040405;   
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url('images/IMG_20230227_192145.png');
+    background-position: right; 
+    background-repeat: no-repeat;  
+}
+/*  **********navigation*********** */
+.container
+{                   /*#ff4b5a; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:50px;
+    background-color: #9c8fdd;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.6%;
+    padding: 10px;
+}
+nav{
+    
+    display: flex;
+    justify-content: right;
+    align-items:center;
+    padding: 10px; 
+    margin-top: 10px;
+}
+nav ul li{
+    display: inline-block;
+    margin:10px 20px;
+    list-style-type: none;
+    padding: 0; 
+}
+nav ul li a{
+    color: #f2eef5;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 30px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width:0;
+    height: 4px;
+    background: #4b2bbf ; 
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+/*   ***************heaD PAGE******************   */
+.header-text{
+    margin-top: 250px;
+    font-size: 30px;
+    font-weight: 200px;
+    margin-left: 10%;
+    color:#040405;
+    width: 400%;
+    height:100vh;
+}
+
+.header-text span {
+    position: relative;
+    font-size: 3.2rem;
+    color:#4b2bbf;
+    width: 0;
+    white-space: nowrap;
+    animation: typing 5s steps(20,end) forwards;
+}
+@keyframes typing {
+    from{width: 0%; 
+    }
+    to{ width: 100%;}
+  }
+ 
+
+ /* ************abt me************   */
+
+ #about{
+    padding: 80px 0;
+    color:#f2eef5;
+    font-size: 20px;
+ }
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.col-1{
+    flex-basis: 35%;
+}
+.col-1 img{
+    margin-left: 100px;
+    border-radius: 19px;
+}
+.col-2{
+    margin-top: 100px;
+    flex-basis: 60%;
+    color: #040405;
+}
+.sub-title{
+    font-size:60px;
+    font-weight: 600;
+    color: #040405;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+    font-size: medium;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #4b2bbf;
+    position:absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 100%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    font-size: 30px;
+}
+.tab-contents ul li span{
+    color: #4b2bbf;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+.tab-link.active-link:hover:after{
+    width: 130%;
+}
+
+/* ***************Education******************  */
+#education{
+    min-height: 100vh;
+    width: 100%;
+    padding:30px 0;
+    color:#040405;
+    
+}
+.edu-container
+.edu-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 45px;
+    margin-top: 50px;
+}
+
+.edu-list div{
+    background-color: #9c8fdd;
+    padding: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    border-right: 10px;
+    transition: background 0.5s,transform 0.5s;
+}
+
+.edu-list i{
+    text-align: center;
+    height: 60px;
+    width: 40px;
+}
+
+.edu-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.edu-list div:hover{
+    background:#261e50;
+    color: #fff;
+    transform: translateY(-10px);
+}
+
+/* ------------------Projects-------------- */
+#Projects{
+    padding: 40px 0;
+}
+.proj-container{
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 70%;
+    height: 75%;
+    border-radius: 10px;
+    display: block;
+   
+
+}
+.layer{
+    width: 70%;
+     height: 0; 
+    background: linear-gradient(rgb(209, 207, 207),#4b2bbf);
+    border-radius: 10px;
+   position: absolute;
+   left: 0;
+   top: 0;
+   bottom: 0;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   padding: 0 40px;
+   text-align: center;
+   font-size: 16px;
+   transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.work:hover .layer{
+    height: 75%;
+}
+/* ------------------------------------ */
+
+
+
+/*   *****************  Contact Me  **********************  */
+
+#contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+
+ .contact-left p{
+    margin-top: 30px;
+ }
+ .contact-left p i{
+    color:black;
+    margin-right: 15px;
+    font-size: 25px;
+ }
+ .social-icons{
+    margin-top: 30px;
+ }
+ .social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+ }
+
+ .social-icons a:hover{
+    color: #4b2bbf;
+    transform:translateY(-7px); 
+ }
+
+ .btn{
+    display: inline-block;
+    background: #6e57e0;
+ }
+.btn a{
+    color: #f2eef5;
+    text-decoration: none;
+}
+ .contact-right form{
+    width: 100%;
+ }
+
+ form input, form textarea{
+    width:100%;
+    border:0;
+    outline:none;
+    background:#ababab;
+    padding: 15px;
+    margin:15px 0;
+    color:black;
+    font-size: 18px;
+    border-radius: 6px;
+ }
+
+.btn2{
+    padding: 14px  60px;
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #6e57e0;
+    color:#f2eef5;
+ }
+
+  
