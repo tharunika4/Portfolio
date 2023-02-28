@@ -74,7 +74,7 @@ nav ul li a:hover::after{
     height:100vh;
 }
 
-.header-text span {
+.text-two span {
     position: relative;
     font-size: 3.2rem;
     color:#4b2bbf;
@@ -82,12 +82,6 @@ nav ul li a:hover::after{
     white-space: nowrap;
     animation: typing 5s steps(20,end) forwards;
 }
-@keyframes typing {
-    from{width: 0%; 
-    }
-    to{ width: 100%;}
-  }
- 
 
  /* ************abt me************   */
 
